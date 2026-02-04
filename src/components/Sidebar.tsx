@@ -42,7 +42,7 @@ export const Sidebar = () => {
                   key={link.label}
                   href={link.link}
                   onClick={() => setActive(link.link)}
-                  className={cn('text-neutral-300 flex items-center gap-2 hover:text-primary transition-colors duration-200 text-base', active === link.link && 'text-primary')}>
+                  className={cn('text-neutral-300 flex items-center gap-2 mb-3.5 hover:text-primary transition-colors duration-200 text-base', active === link.link && 'text-primary')}>
                   <Icon className= 'size-4'/> {link.label}
                 </a>
               )
