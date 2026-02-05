@@ -13,7 +13,7 @@ export const Profile = () => {
                 <h1 className="text-3xl font-bold">Pramod</h1>
                 <p className="text-sm">Full Stack Developer</p>
             </div>
-            <img src="/avatar.jpg" alt="Pramod" className="lg:w-96 rounded-2xl object-cover" />
+            <img src="/avatar.jpg.jpeg" alt="Pramod" className="lg:w-96 rounded-2xl object-cover hover:scale-102 transition duration-200" />
 
             <div className="mt-6">
                 <p className="text-neutral-300 text-sm">Specialization:</p>
