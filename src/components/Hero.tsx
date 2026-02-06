@@ -12,6 +12,14 @@ import { Button } from "@/components/ui/button"
 import { SparkleIcon } from "lucide-react"
 
 export const Hero = () => {
+    const handleDownloadCV = () => {
+        const link = document.createElement('a');
+        link.href = '/pramod_cv.pdf';
+        link.download = 'Pramod_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
     return (
         <motion.section
             initial='hidden'
@@ -31,8 +39,8 @@ export const Hero = () => {
             </motion.h1>
 
             <motion.div variants={fadeUp} className="mt-5 flex gap-2">
-                <Button asChild><a href="#projects">My projects</a></Button>
-                <Button variant="outline">Download CV</Button>
+                {/* <Button asChild><a href="#projects">Read My Blogs</a></Button> */}
+                <Button variant="outline" onClick={handleDownloadCV}>Download CV</Button>
             </motion.div>
         </motion.section>
     )

@@ -35,7 +35,9 @@ export const About = () => {
 
 
             <motion.div variants={fadeUp} transition={{ delay: 0.2 }}>
-                <Button className="mt-5">Contact Me</Button>
+                <Button asChild className="mt-5">
+                    <a href="#contact">Contact Me</a>
+                </Button>
             </motion.div>
 
         </motion.section>
