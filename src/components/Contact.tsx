@@ -1,6 +1,9 @@
 //Node modules
 import { useForm } from 'react-hook-form'
 import { motion } from 'motion/react'
+import { useState } from 'react'
+import emailjs from '@emailjs/browser'
+import { CheckCircle, AlertCircle } from 'lucide-react'
 
 //Custom module
 import { fadeUp } from '@/lib/animations'
@@ -32,8 +35,30 @@ export const Contact = () => {
             message: ''
         }
     })
-    const onSubmit = (values: ContactFormValues) => {
-        console.log(values)
+    const [isLoading, setIsLoading] = useState(false)
+    const [submitStatus, setSubmitStatus] = useState<{ type: "success" | "error" | null; message: string }>({ type: null, message: "" })
+
+    const onSubmit = async (values: ContactFormValues, e?: React.BaseSyntheticEvent) => {
+        e?.preventDefault()
+        setIsLoading(true)
+        setSubmitStatus({ type: null, message: "" })
+        try {
+            const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+            const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+            const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+            if (!serviceId || !templateId || !publicKey) {
+                throw new Error("Email service is not configured properly.")
+            }
+
+            await emailjs.send(serviceId, templateId, values, publicKey)
+            setSubmitStatus({ type: "success", message: "Your message has been sent successfully! I'll get back to you soon." })
+            form.reset()
+        } catch (error) {
+            setSubmitStatus({ type: "error", message: "Something went wrong. Please try again later." })
+        } finally {
+            setIsLoading(false)
+        }
     }
     return (
         <motion.section
@@ -55,7 +80,7 @@ export const Contact = () => {
                             render={({ field }) => (
                                 <FormItem className='w-full'>
                                     <FormControl>
-                                        <Input placeholder='Your name' {...field} className='border-0' />
+                                        <Input required placeholder='Your name' {...field} className='border-0' />
                                     </FormControl>
 
                                     <FormMessage />
@@ -68,7 +93,7 @@ export const Contact = () => {
                             render={({ field }) => (
                                 <FormItem className='w-full'>
                                     <FormControl>
-                                        <Input type='email' placeholder='youremail@example.com' {...field} className='border-0' />
+                                        <Input required type='email' placeholder='your@email.com' {...field} className='border-0' />
                                     </FormControl>
 
                                     <FormMessage />
@@ -81,7 +106,7 @@ export const Contact = () => {
                             render={({ field }) => (
                                 <FormItem className='w-full'>
                                     <FormControl>
-                                        <Input type='tel' placeholder='+123467890' {...field} className='border-0' />
+                                        <Input required type='tel' placeholder='Your phone number' {...field} className='border-0' />
                                     </FormControl>
 
                                     <FormMessage />
@@ -108,13 +133,23 @@ export const Contact = () => {
                         render={({ field }) => (
                             <FormItem className='w-full'>
                                 <FormControl>
-                                    <Textarea placeholder='Your message' {...field} className='border-0 h-36' rows={10} />
+                                    <Textarea required placeholder='Your message...' {...field} className='border-0 h-36 resize-none' rows={10} />
                                 </FormControl>
                                 <FormMessage />
                             </FormItem>
                         )}
                     />
-                    <Button type='submit' size='lg'>Send Message</Button>
+                    <Button type='submit' size='lg' disabled={isLoading}>
+                        {isLoading ? "Sending..." : "Send Message"}
+                    </Button>
+                    {submitStatus.type === "success" && (
+                        <div className={`flex items-center gap-3 p-4 rounded-xl ${
+                            submitStatus.type === "success" ? "bg-green-500/10 border border-green-500/20 text-green-800" : "bg-red-500/10 border border-red-500/20 text-red-800"
+                        }`}>
+                        {submitStatus.type === "success" ? <CheckCircle className='w-5 h-5 shrink-0' /> : <AlertCircle className='w-5 h-5 shrink-0' />}
+                        <p className="text-sm">{submitStatus.message}</p>
+                        </div>
+                    )  }
                 </form>
             </Form>
         </motion.section>
