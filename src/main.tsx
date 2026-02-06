@@ -12,9 +12,9 @@ import '@/index.css'
 
 //Components
 import { App } from '@/App'
-import { Sidebar } from '@/components/Sidebar'
-import { FloatingMenu } from '@/components/FloatingMenu'
-import { Profile } from '@/components/Profile'
+import { Sidebar } from '@/components/sections/Sidebar'
+import { FloatingMenu } from '@/components/sections/FloatingMenu'
+import { Profile } from '@/components/sections/Profile'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

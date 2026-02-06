@@ -5,11 +5,11 @@ import { motion } from "motion/react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 //components
-import { SectionHeader } from "@/components/SectionHeader";
+import { SectionHeader } from "@/components/ui/SectionHeader";
 
 //constants
 import { services } from "@/constants";
-import { ServiceCard } from "@/components/ServiceCard";
+import { ServiceCard } from "@/components/cards/ServiceCard";
 
 
 export const Services = () => {
