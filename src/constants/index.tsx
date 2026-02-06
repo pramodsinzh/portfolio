@@ -147,10 +147,42 @@ const experience: ExperienceType[] = [
 ];
 
 const tools: ToolsType[] = [
+  
+  {
+    label: 'JavaScript',
+    imgSrc: '/images/tools/javascript.svg',
+  },
+
+  {
+    label: 'Mongodb',
+    imgSrc: '/images/tools/mongodb.svg',
+  },
+
+  {
+    label: 'Express.js',
+    imgSrc: '/images/tools/expressjs.svg',
+  },
+
+  {
+    label: 'React',
+    imgSrc: '/images/tools/react.svg',
+  },
+
+  {
+    label: 'Node.js',
+    imgSrc: '/images/tools/nodejs.svg',
+  },
+
+  {
+    label: 'Postman',
+    imgSrc: '/images/tools/postman.svg',
+  },
+
   {
     label: 'Figma',
     imgSrc: '/images/tools/figma.svg',
   },
+
   {
     label: 'CSS',
     imgSrc: '/images/tools/css3.svg',
@@ -160,25 +192,10 @@ const tools: ToolsType[] = [
     imgSrc: '/images/tools/tailwindcss.svg',
   },
   {
-    label: 'React',
-    imgSrc: '/images/tools/react.svg',
+    label: 'Github',
+    imgSrc: '/images/tools/github.svg',
   },
-  {
-    label: 'JavaScript',
-    imgSrc: '/images/tools/javascript.svg',
-  },
-  {
-    label: 'Node.js',
-    imgSrc: '/images/tools/nodejs.svg',
-  },
-  {
-    label: 'Express.js',
-    imgSrc: '/images/tools/expressjs.svg',
-  },
-  {
-    label: 'Mongodb',
-    imgSrc: '/images/tools/mongodb.svg',
-  },
+
 ];
 
 const services: ServiceType[] = [
