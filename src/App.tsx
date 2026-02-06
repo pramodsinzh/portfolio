@@ -1,20 +1,21 @@
- /**
-  * @copyright 2026 pramod_singh
-  * @license Apache-2.0
-  */
+/**
+ * @copyright 2026 pramod_singh
+ * @license Apache-2.0
+ */
 
- //node modules
+//node modules
 import { useEffect } from "react"
 
- //components 
+//components 
 import { Hero } from "@/components/Hero"
 import { Stats } from "@/components/Stats"
 import { Projects } from "@/components/Projects"
 import { About } from "@/components/About"
 import { Services } from "@/components/Services"
 import { Resume } from "@/components/Resume"
+import { Testimonials } from "@/components/Testimonials"
 
- export const App = () => {
+export const App = () => {
   return (
     <main className="flex flex-col container mx-auto p-10 max-w-4xl lg:pr-10 lg:pl-0 lg:max-w-6xl">
       <Hero />
@@ -23,6 +24,7 @@ import { Resume } from "@/components/Resume"
       <About />
       <Services />
       <Resume />
+      <Testimonials />
     </main>
   )
- }
+}
