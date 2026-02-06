@@ -8,9 +8,10 @@ import { useEffect } from "react"
 import Lenis from "lenis"
 
 //components 
+
 import { Hero } from "@/components/sections/Hero"
-import { Stats } from "@/components/customUI/Stats"
 import { Projects } from "@/components/sections/Projects"
+import { Stats } from "@/components/customUI/Stats"
 import { About } from "@/components/sections/About"
 import { Services } from "@/components/sections/Services"
 import { Resume } from "@/components/sections/Resume"
@@ -18,8 +19,8 @@ import { Testimonials } from "@/components/sections/Testimonials"
 import { Contact } from "@/components/sections/Contact"
 
 export const App = () => {
-  
-  useEffect(()=> {
+
+  useEffect(() => {
     const lenis = new Lenis()
 
     function raf(time: any) {
