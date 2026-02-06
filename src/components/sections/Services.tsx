@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 //components
-import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SectionHeader } from "@/components/customUI/SectionHeader";
 
 //constants
 import { services } from "@/constants";

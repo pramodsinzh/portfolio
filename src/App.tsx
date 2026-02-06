@@ -9,7 +9,7 @@ import Lenis from "lenis"
 
 //components 
 import { Hero } from "@/components/sections/Hero"
-import { Stats } from "@/components/ui/Stats"
+import { Stats } from "@/components/customUI/Stats"
 import { Projects } from "@/components/sections/Projects"
 import { About } from "@/components/sections/About"
 import { Services } from "@/components/sections/Services"

@@ -6,7 +6,7 @@ import { motion } from "motion/react"
 import { staggerContainer } from "@/lib/animations"
 
 //components 
-import { SectionHeader } from "@/components/ui/SectionHeader"
+import { SectionHeader } from "@/components/customUI/SectionHeader"
 import { ProjectCard } from "@/components/cards/ProjectCard"
 
 

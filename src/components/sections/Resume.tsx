@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
 
 //components
-import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SectionHeader } from "@/components/customUI/SectionHeader";
 import { ExpCard } from "@/components/cards/ExpCard";
 import { ToolsCard } from "@/components/cards/ToolsCard";
 
