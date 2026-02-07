@@ -3,7 +3,7 @@
 import { motion } from "motion/react"
 
 //custom modules
-import { fadeUp, staggerContainer } from "@/lib/animations"
+import { staggerContainer } from "@/lib/animations"
 
 //components
 import { Button } from "@/components/ui/button"
@@ -30,15 +30,15 @@ export const Hero = () => {
             id="hero"
         >
             <motion.p
-                variants={fadeUp}
+                // variants={fadeUp}
                 className="flex items-center justify-center py-1 gap-2 border border-neutral-600 rounded-sm w-32"
             ><SparkleIcon size={15} /><span>Introduction</span></motion.p>
 
-            <motion.h1 variants={fadeUp} className="text-4xl md:text-5xl lg:text-6xl font-semibold capitalize mt-2 max-w-3xl md:leading-16">
+            <motion.h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold capitalize mt-2 max-w-3xl md:leading-16">
                 I'm <span className="text-primary"> Pramod</span> Full stack developer.
             </motion.h1>
 
-            <motion.div variants={fadeUp} className="mt-5 flex gap-2">
+            <motion.div className="mt-5 flex gap-2">
                 {/* <Button asChild><a href="#projects">Read My Blogs</a></Button> */}
                 <Button variant="outline" onClick={handleDownloadCV}>Download CV</Button>
             </motion.div>
