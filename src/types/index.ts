@@ -3,14 +3,17 @@
  * @license Apache-2.0
  */
 
-import type { JSX } from 'react';
-
-export type ProjectType = {
-  imgSrc: string;
+import type { JSX, ReactNode } from 'react';
+ 
+export type ProjectTypes = {
   title: string;
+  description: string;
+  image: string;
   tags: string[];
-  projectLink: string;
+  link: string;
+  github: string;
 };
+
 
 export type ExperienceType = {
   year: string;
@@ -22,7 +25,7 @@ export type ExperienceType = {
 export type ServiceType = {
   title: string;
   desc: string;
-  projects: string;
+  // projects: string;
   icon: JSX.Element;
 };
 
@@ -44,6 +47,11 @@ export type TestimonialsType = {
   link: string;
 };
 
+export type NavLinksType = {
+  name: string;
+  link: string;
+  icon: ReactNode;
+};
 export type LinksType = {
   label: string;
   link: string;

@@ -12,9 +12,7 @@ import '@/index.css'
 
 //Components
 import { IntroAnimation } from "@/components/customUI/IntroAnimation"
-import { App } from '@/App'
-import { Sidebar } from '@/components/sections/Sidebar'
-import { FloatingMenu } from '@/components/sections/FloatingMenu'
+import { App } from '@/App' 
 import { Profile } from '@/components/sections/Profile'
 
 function RootApp() {
@@ -26,10 +24,8 @@ function RootApp() {
         {!introDone && <IntroAnimation onFinish={() => setIntroDone(true)} />}
         {introDone && (
           <div className="min-h-screen lg:flex lg:justify-center lg:items-start lg:gap-10">
-            <Profile />
-            <Sidebar />
-            <App />
-            <FloatingMenu />
+            <Profile /> 
+            <App /> 
           </div>
         )}
       </>

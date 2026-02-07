@@ -39,7 +39,7 @@ export const Hero = () => {
             </motion.h1>
 
             <motion.div className="mt-5 flex gap-2">
-                {/* <Button asChild><a href="#projects">Read My Blogs</a></Button> */}
+                <Button asChild><a href="#">Read My Blogs</a></Button>
                 <Button variant="outline" onClick={handleDownloadCV}>Download CV</Button>
             </motion.div>
         </motion.section>

@@ -9,14 +9,16 @@ import Lenis from "lenis"
 
 //components 
 
-import { Hero } from "@/components/sections/Hero"
-import { Projects } from "@/components/sections/Projects"
-import { Stats } from "@/components/customUI/Stats"
+import { Hero } from "@/components/sections/Hero" 
+import { Stats } from "@/components/sections/Stats"
 import { About } from "@/components/sections/About"
 import { Services } from "@/components/sections/Services"
 import { Resume } from "@/components/sections/Resume"
 import { Testimonials } from "@/components/sections/Testimonials"
 import { Contact } from "@/components/sections/Contact"
+import { Projects } from "@/components/sections/Projects" 
+import { FloatingNav } from "@/components/ui/floating-navbar" 
+import { navLinks } from "@/constants"
 
 export const App = () => {
 
@@ -32,9 +34,10 @@ export const App = () => {
 
   return (
     <main className="flex flex-col container mx-auto p-10 max-w-4xl lg:pr-10 lg:pl-0 lg:max-w-6xl">
+      <FloatingNav navItems={navLinks}/>
       <Hero />
       <Stats />
-      <Projects />
+      <Projects /> 
       <About />
       <Services />
       <Resume />

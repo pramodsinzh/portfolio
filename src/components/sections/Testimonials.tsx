@@ -31,7 +31,7 @@ export const Testimonials = () => {
                 <SparkleIcon size={15} /> Reviews
             </p>
 
-            <h2 className='text-4xl font-bold capitalize mt-2 md:max-w-3xl'>What clients say about me</h2>
+            <h2 className='text-4xl font-bold capitalize mt-2 md:max-w-3xl'>What people say about my work</h2>
             <div className="mt-10 relative w-full">
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -60,7 +60,7 @@ export const Testimonials = () => {
 
                             <p className="text-neutral-300 leading-relaxed">{testimonials[curSlide].text}</p>
 
-                            <a href={testimonials[curSlide].link} className="inline-flex items-center gap-1 text-sm font-medium hover:text-green-400 text-neutral-400 transition">Project → </a>
+                            {/* <a href={testimonials[curSlide].link} className="inline-flex items-center gap-1 text-sm font-medium hover:text-green-400 text-neutral-400 transition">Project → </a> */}
                         </div>
                     </motion.div>
                 </AnimatePresence>
