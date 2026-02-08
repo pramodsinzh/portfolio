@@ -9,16 +9,16 @@ import Lenis from "lenis"
 
 //components 
 
+import { navLinks } from "@/constants"
+import { FloatingNav } from "@/components/ui/floating-navbar" 
 import { Hero } from "@/components/sections/Hero" 
 import { Stats } from "@/components/sections/Stats"
 import { About } from "@/components/sections/About"
-import { Services } from "@/components/sections/Services"
+import { Projects } from "@/components/sections/Projects"
 import { Resume } from "@/components/sections/Resume"
+import { Services } from "@/components/sections/Services"
 import { Testimonials } from "@/components/sections/Testimonials"
 import { Contact } from "@/components/sections/Contact"
-import { Projects } from "@/components/sections/Projects" 
-import { FloatingNav } from "@/components/ui/floating-navbar" 
-import { navLinks } from "@/constants"
 
 export const App = () => {
 
