@@ -8,8 +8,8 @@
  */
 import type {
   ExperienceType,
-  LinksType, 
-  NavLinksType, 
+  LinksType,
+  NavLinksType,
   ProjectTypes,
   ServiceType,
   StatsType,
@@ -32,7 +32,7 @@ import {
   MessageCircle,
   Palette,
   Rocket,
-  Settings, 
+  Settings,
   Twitter,
   User,
   Linkedin,
@@ -91,50 +91,83 @@ const socialLinks: LinksType[] = [
 
 const projectData: ProjectTypes[] = [
   {
-    title: "Fintech Dashboard",
+    title: "Blogify",
     description:
-      "A comprehensive financial analytics platform with real-time data visualization, portfolio management, and AI-powered insights.",
-    image: "/images/project1.png",
-    tags: ["React", "Typescript", "NodeJS"],
-    link: "#",
+       "A modern full-stack blogging platform where only admins can create, publish, and manage blogs, while users can freely read posts and leave comments. Built with a focus on performance, clean UI, and scalable architecture.",
+    image: "/images/blogify.png",
+    tags: ["React", "Node.js", "Express", "MongoDB"],
+    // link: "#",
+    github: "https://github.com/pramodsinzh/Blogify",
+  },
+
+  {
+    title: "CMS for e-Commerce Platform",
+    description:
+      "A full-featured cms for e-commerce solution with inventory management, payment processing, and analytics dashboard.",
+    image: "/images/cms-ecommerce.png",
+    tags: ["React", "Typescript", "NodeJS", "Next.js", "Tailwind"],
+    // link: "#",
     github: "#",
   },
   {
-    title: "E-Commerce Platform",
+    title: "RESTful Backend API",
     description:
-      "A full-featured e-commerce solution with inventory management, payment processing, and analytics dashboard.",
-    image: "/projects/project2.png",
-    tags: ["Next.js", "Stripe", "PostgreSQL", "Tailwind"],
-    link: "#",
-    github: "#",
+      "A scalable backend application built using Node.js, Express, and MongoDB, providing secure RESTful APIs with full CRUD functionality, data validation, and efficient database operations. Designed for performance, maintainability, and real-world use cases.",
+    image: "/images/backend.png",
+    tags: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "REST API",
+      "JWT",
+      "Mongoose"
+    ],
+    // link: "#",
+    github: "https://github.com/Broadway-Mern-Team/api-50/tree/pramod",
   },
   {
-    title: "AI Writing Assistant",
+    title: "Password Manager",
     description:
-      "An intelligent writing tool powered by GPT-4, helping users create better content faster.",
-    image: "/projects/project3.png",
-    tags: ["React", "OpenAI", "Python", "FastAPI"],
-    link: "#",
-    github: "#",
+      "A dual-version password management application featuring both a client-side localStorage implementation and a full-stack MongoDB-powered solution. Designed to securely store, manage, and sync passwords with a modern UI, responsive design, and smooth user experience.",
+    image: "/images/password-manager.png",
+    tags: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Express",
+      "MongoDB",
+      "localStorage"
+    ],
+    // link: "#",
+    github: "https://github.com/pramodsinzh/Password-Manager",
+  },
+
+  {
+    title: "Todo App",
+    description:
+      "A clean and minimal Todo application built with React and Vite, featuring task creation, editing, deletion, completion tracking, and pinning important todos. Designed for productivity with a smooth UI and persistent localStorage support.",
+    image: "/images/todo.png",
+    tags: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "localStorage",
+      "UUID"
+    ],
+    // link: "#",
+    github: "https://github.com/pramodsinzh/TodoList-App-React-",
   },
   {
-    title: "Project Management Tool",
+    title: "Spotify Clone - Music app",
     description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "Project Management Tool",
-    description:
-      "A collaborative workspace for teams with real-time updates, task tracking, and integrations.",
-    image: "/projects/project4.png",
-    tags: ["Next.js", "Socket.io", "MongoDB", "Redis"],
-    link: "#",
-    github: "#",
-  },
+      "A modern music streaming app inspired by Spotify, featuring playlists, search, playback controls, and a responsive, dynamic UI.",
+    image: "/images/music-app.png",
+    tags: ["JavaScript", "HTML", "CSS"],
+    // link: "#",
+    github: "https://github.com/pramodsinzh/spotifyclone",
+  }
+
 ];
 
 const education: ExperienceType[] = [
@@ -174,7 +207,7 @@ const experience: ExperienceType[] = [
 ];
 
 const tools: ToolsType[] = [
-  
+
   {
     label: 'JavaScript',
     imgSrc: '/images/tools/javascript.svg',
@@ -243,13 +276,13 @@ const services: ServiceType[] = [
     desc: 'Creating simple and consistent visual identities through thoughtful typography, color systems, and layout design.',
     // projects: '58 Projects',
     icon: <Palette className='h-6 w-6 text-green-400' />,
-  }, 
+  },
   {
     title: 'Full-Stack Development',
     desc: 'Developing complete web applications with secure REST APIs, and databases using the MERN stack.',
     // projects: '58 Projects',
     icon: <Rocket className='h-6 w-6 text-green-400' />,
-  }, 
+  },
 ];
 
 

@@ -10,7 +10,7 @@ export type ProjectTypes = {
   description: string;
   image: string;
   tags: string[];
-  link: string;
+  // link: string;
   github: string;
 };
 
