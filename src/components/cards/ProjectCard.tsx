@@ -1,6 +1,6 @@
 // node modules
 import { motion } from "motion/react";
-import { ArrowUpRight, Github } from "lucide-react";
+import { Github } from "lucide-react";
 
 // custom modules
 import { fadeUp } from "@/lib/animations";
@@ -13,7 +13,7 @@ export const ProjectCard = ({
   description,
   image,
   tags,
-  link,
+  // link,
   github,
 }: ProjectTypes) => {
   return (
@@ -34,7 +34,7 @@ export const ProjectCard = ({
 
         {/* Overlay Actions */}
         <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          {link && (
+          {/* {link && (
             <a
               href={link}
               target="_blank"
@@ -43,7 +43,7 @@ export const ProjectCard = ({
             >
               <ArrowUpRight className="w-5 h-5" />
             </a>
-          )}
+          )} */}
           {github && (
             <a
               href={github}
