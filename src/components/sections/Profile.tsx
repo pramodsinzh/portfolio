@@ -28,7 +28,7 @@ export const Profile = () => {
                 {socialLinks.map((social, i) => {
                     const Icon = social.icon;
                     return (
-                        <a key={i} href={social.link} className="hover:text-primary border-2 border-neutral-500 p-2 rounded-full hover:border-primary transition duration-200"><Icon className='size-6' /></a>
+                        <a target="0" key={i} href={social.link} className="hover:text-primary border-2 border-neutral-500 p-2 rounded-full hover:border-primary transition duration-200"><Icon className='size-6' /></a>
                     )
                 })}
             </div>

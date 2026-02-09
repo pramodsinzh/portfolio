@@ -239,8 +239,8 @@ const tools: ToolsType[] = [
   },
 
   {
-    label: 'Figma',
-    imgSrc: '/images/tools/figma.svg',
+    label: 'TypeScript',
+    imgSrc: '/images/tools/typescript.svg',
   },
 
   {
