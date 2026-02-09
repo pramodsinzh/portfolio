@@ -65,7 +65,7 @@ export const Hero = () => {
 
 
             <motion.div className="mt-5 flex gap-2">
-                <Button asChild><a href="#">Read My Blogs</a></Button>
+                <Button asChild><a href="https://pramod-blogify.vercel.app/" target="0">Read My Blogs</a></Button>
                 <Button variant="outline" onClick={handleDownloadCV}>Download CV</Button>
             </motion.div>
         </motion.section>
