@@ -13,7 +13,7 @@ import '@/index.css'
 //Components
 import { IntroAnimation } from "@/components/customUI/IntroAnimation"
 import { App } from '@/App' 
-import { Profile } from '@/components/sections/Profile'
+import { Profile } from '@/components/sections/Profile' 
 
 function RootApp() {
   const [introDone, setIntroDone] = useState(false);

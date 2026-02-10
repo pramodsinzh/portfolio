@@ -19,7 +19,7 @@ export const Services = () => {
             whileInView='visible'
             viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer(0)}
-            className="mt-30 scroll-mt-10"
+            className="mt-20 scroll-mt-10"
             id="services"
         >
             <SectionHeader subtitle="Services" title="Building with Purpose, Passion & Precision" />

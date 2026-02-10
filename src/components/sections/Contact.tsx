@@ -1,7 +1,7 @@
 //Node modules
 import { useForm } from 'react-hook-form'
 import { motion } from 'motion/react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import { CheckCircle, AlertCircle } from 'lucide-react'
 
@@ -38,6 +38,15 @@ export const Contact = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [submitStatus, setSubmitStatus] = useState<{ type: "success" | "error" | null; message: string }>({ type: null, message: "" })
 
+    useEffect(() => {
+        if (submitStatus.type) {
+            const timer = setTimeout(() => {
+                setSubmitStatus({ type: null, message: "" })
+            }, 5000)
+            return () => clearTimeout(timer)
+        }
+    }, [submitStatus.type])
+
     const onSubmit = async (values: ContactFormValues, e?: React.BaseSyntheticEvent) => {
         e?.preventDefault()
         setIsLoading(true)
@@ -66,7 +75,7 @@ export const Contact = () => {
             whileInView='visible'
             viewport={{ once: true, amount: 0.8 }}
             variants={fadeUp}
-            className="mt-30 scroll-mt-10"
+            className="mt-20 scroll-mt-10"
             id="contact"
         >
             <SectionHeader subtitle="Contact" title="Let’s build something awesome together!" />
@@ -77,6 +86,13 @@ export const Contact = () => {
                         <FormField
                             control={form.control}
                             name='name'
+                            rules={{
+                                required: 'Name is required',
+                                pattern: {
+                                    value: /^[a-zA-Z\s]{2,}$/,
+                                    message: 'Name must contain only letters and spaces, minimum 2 characters'
+                                }
+                            }}
                             render={({ field }) => (
                                 <FormItem className='w-full'>
                                     <FormControl>
@@ -90,6 +106,13 @@ export const Contact = () => {
                         <FormField
                             control={form.control}
                             name='email'
+                            rules={{
+                                required: 'Email is required',
+                                pattern: {
+                                    value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                                    message: 'Please enter a valid email address'
+                                }
+                            }}
                             render={({ field }) => (
                                 <FormItem className='w-full'>
                                     <FormControl>
@@ -103,6 +126,13 @@ export const Contact = () => {
                         <FormField
                             control={form.control}
                             name='phone'
+                            rules={{
+                                required: 'Phone number is required',
+                                pattern: {
+                                    value: /^[\d\s\-\+\(\)]{7,}$/,
+                                    message: 'Please enter a valid phone number (at least 7 digits)'
+                                }
+                            }}
                             render={({ field }) => (
                                 <FormItem className='w-full'>
                                     <FormControl>
