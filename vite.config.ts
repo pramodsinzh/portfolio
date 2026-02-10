@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 
 export default defineConfig({
-  base: "/", // ✅ REQUIRED for custom domain
+  base: "/", // ✅ REQUIRED
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
@@ -12,3 +12,4 @@ export default defineConfig({
     },
   },
 });
+
