@@ -31,12 +31,7 @@ export const Hero = () => {
     }, [subIndex, index, deleting, roles])
 
     const handleDownloadCV = () => {
-        const link = document.createElement('a');
-        link.href = '/pramod_cv.pdf';
-        link.download = 'Pramod_CV.pdf';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
+        window.open('/pramod_cv.pdf', '_blank');
     };
     return (
         <motion.section
