@@ -90,7 +90,7 @@ export const FloatingNav = ({
               key={item.link}
               href={item.link}
               className={cn(
-                "relative flex items-center justify-center px-4 py-2 text-sm rounded-full transition-colors font-semibold",
+                "relative flex items-center justify-center px-2 sm:px-4 py-2 text-sm rounded-full transition-colors font-semibold",
                 isActive
                   ? "text-primary"
                   : "text-neutral-400 hover:text-neutral-200"

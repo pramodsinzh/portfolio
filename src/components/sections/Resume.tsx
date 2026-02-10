@@ -15,7 +15,7 @@ import { education, experience, tools } from "@/constants";
 export const Resume = () => {
     return (
         <motion.section
-            initial='hidden'
+            // initial='hidden'
             whileInView='visible'
             viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer(0)}
