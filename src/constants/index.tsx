@@ -255,6 +255,14 @@ const tools: ToolsType[] = [
     label: 'Github',
     imgSrc: '/images/tools/github.svg',
   },
+  {
+    label: 'Bootstrap',
+    imgSrc: '/images/tools/bootstrap.svg',
+  },
+  {
+    label: 'Next.js',
+    imgSrc: '/images/tools/nextjs.svg',
+  },
 
 ];
 
