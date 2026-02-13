@@ -33,8 +33,8 @@ export const Profile = () => {
                 })}
             </div>
 
-            <Button className="mt-2" size='lg'>
-                Let's Work
+            <Button asChild className="mt-2" size='lg'>
+                <a href="#contact">Let's Work</a>
             </Button>
         </div>
     </aside>

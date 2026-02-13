@@ -4,6 +4,7 @@ import { motion } from 'motion/react'
 import { useState, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import { CheckCircle, AlertCircle } from 'lucide-react'
+import { isValidPhoneNumber } from 'libphonenumber-js';
 
 //Custom module
 import { fadeUp } from '@/lib/animations'
@@ -125,24 +126,27 @@ export const Contact = () => {
                         />
                         <FormField
                             control={form.control}
-                            name='phone'
+                            name="phone"
                             rules={{
                                 required: 'Phone number is required',
-                                pattern: {
-                                    value: /^[\d\s\-\+\(\)]{7,}$/,
-                                    message: 'Please enter a valid phone number (at least 7 digits)'
-                                }
+                                validate: (value) =>
+                                    isValidPhoneNumber(value) || 'Please enter a valid phone number'
                             }}
                             render={({ field }) => (
-                                <FormItem className='w-full'>
+                                <FormItem className="w-full">
                                     <FormControl>
-                                        <Input required type='tel' placeholder='Your phone number' {...field} className='border-0' />
+                                        <Input
+                                            type="tel"
+                                            placeholder="Your phone number with country code"
+                                            {...field}
+                                            className="border-0"
+                                        />
                                     </FormControl>
-
                                     <FormMessage />
                                 </FormItem>
                             )}
                         />
+
                         <FormField
                             control={form.control}
                             name='company'
@@ -173,13 +177,12 @@ export const Contact = () => {
                         {isLoading ? "Sending..." : "Send Message"}
                     </Button>
                     {submitStatus.type === "success" && (
-                        <div className={`flex items-center gap-3 p-4 rounded-xl ${
-                            submitStatus.type === "success" ? "bg-green-500/10 border border-green-500/20 text-green-800" : "bg-red-500/10 border border-red-500/20 text-red-800"
-                        }`}>
-                        {submitStatus.type === "success" ? <CheckCircle className='w-5 h-5 shrink-0' /> : <AlertCircle className='w-5 h-5 shrink-0' />}
-                        <p className="text-sm">{submitStatus.message}</p>
+                        <div className={`flex items-center gap-3 p-4 rounded-xl ${submitStatus.type === "success" ? "bg-green-500/10 border border-green-500/20 text-green-800" : "bg-red-500/10 border border-red-500/20 text-red-800"
+                            }`}>
+                            {submitStatus.type === "success" ? <CheckCircle className='w-5 h-5 shrink-0' /> : <AlertCircle className='w-5 h-5 shrink-0' />}
+                            <p className="text-sm">{submitStatus.message}</p>
                         </div>
-                    )  }
+                    )}
                 </form>
             </Form>
         </motion.section>
